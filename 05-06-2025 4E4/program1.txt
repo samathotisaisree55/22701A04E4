@@ -1,0 +1,15 @@
+class Main {
+    public static void main(String[] args) {
+        Tree t=new Tree(new int[]{ 1,2,4,-1,-1,5,7,-1,8,-1,-1,3,9,11,-1,-1,10,-1,-1,-1});
+        Noderoot=t.getroot();
+        int heightofroot=Tree.heightof(root);
+        System.out.println("height of tree is:"+heightofroot);
+        }
+    public static int heightOf(Noderoot){
+        if(root==null)
+        return 0;
+        int lh=heightof(rootleft);
+        int rh=heightof(rootright);
+        return Math.max(lh,rh)+1;
+    }
+}

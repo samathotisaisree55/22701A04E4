@@ -1,0 +1,34 @@
+class main{
+    public static void main(String[] args){
+        int deleteBeg(){
+            if(head==null){
+                 System.out.prinln("there are no elements to delete");
+                 return-1;
+            }
+            int removedEle=head.data;
+            head=head.next;
+            return removedEle;
+        }
+        int deleteEnd(){
+            int length_=length();
+            var temp=head;
+            if(length_==0){
+                 System.out.prinln("no elements:");
+                 return-1;
+            }
+            if(length_==1){
+                int removedEle=head.data;
+                head=null;
+                return removedEle;
+            }
+            for(int i=1;i<length_-1;i++){
+                temp=temp.next;
+            }
+            int removedEle=temp.next.data;
+            temp.next=null;
+            return removedEle;
+        }
+            
+        }
+    }
+}
